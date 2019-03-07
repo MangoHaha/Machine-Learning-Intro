@@ -19,6 +19,23 @@ Clustering
 Density estimation
 Dimensionality reduction
 
+We also need to know the distinguish between:
+A Discriminative model ‌models the decision boundary between the classes. 
+A Generative Model explicitly models the actual distribution of each class.
+A Generative Model ‌learns the joint probability distribution p(x,y). It predicts the conditional probability with the help of Bayes Theorem. 
+A Discriminative model ‌learns the conditional probability distribution p(y|x). 
+Both of these models were generally used in supervised learning problems.
+Generative classifiers
+  Naïve Bayes
+  Bayesian networks
+  Markov random fields
+  Hidden Markov Models (HMM)
+Discriminative Classifiers
+  Logistic regression
+  Scalar Vector Machine
+  Traditional neural networks
+  Nearest neighbour
+  Conditional Random Fields (CRF)s
 
 
 
