@@ -1,0 +1,24 @@
+Machine Learning is algo + statistics
+
+Usage:
+netfliex recommendation, google map, image recognization, nlp recognization...
+
+supervised vs unsupervised model
+what is supervised model?
+Given (x1, y1) ... (xn,yn), xi are date points, yi are target values. 
+So ML task is to choose a function f(x) = y, and the function must be generalized.
+As the result, given f(x'), you can get y'
+There are not perfect models, we have to do this based on assumptions.
+
+Supervised model normally including:
+regression: yi belongs to finite set  (y1, ... yn)
+classification : yi can be in any real values R
+
+Unsupervised model: it is finding the patterns for the data
+Clustering
+Density estimation
+Dimensionality reduction
+
+
+
+
