@@ -1,0 +1,5 @@
+Form the binary tree, then minimize the error in each leaf.
+In another word, a sequence of binary split on the data.
+At each splitted small section, we still use majority vote.
+
+
