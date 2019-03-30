@@ -1,0 +1,36 @@
+Lets briefly talk about how ML Pipelines works.
+
+Thanks to MLlib standardizes APIs for machine learning algorithms, which 
+make life easier to combine multiple algorithms into a single pipeline, 
+
+DataFrame: This ML API uses DataFrame from Spark SQL as an ML dataset, which can hold a variety of data types. 
+    E.g., a DataFrame could have different columns storing text, feature vectors, true labels, and predictions.
+
+Transformer: A Transformer is an algorithm which can transform one DataFrame into another DataFrame. 
+    E.g., an ML model is a Transformer which transforms a DataFrame with features into a DataFrame with predictions.
+
+Estimator: An Estimator is an algorithm which can be fit on a DataFrame to produce a Transformer. 
+    E.g., a learning algorithm is an Estimator which trains on a DataFrame and produces a model.
+
+Pipeline: A Pipeline chains multiple Transformers and Estimators together to specify an ML workflow.
+
+Parameter: All Transformers and Estimators now share a common API for specifying parameters.
+
+When you are designing a model, is you are designing a estimator.
+An Estimator abstracts the concept of a learning algorithm or any algorithm that fits or trains on data. 
+Technically, an Estimator implements a method fit(), which accepts a DataFrame and produces a Model, 
+which is a Transformer. For example, a learning algorithm such as LogisticRegression is an Estimator, 
+and calling fit() trains a LogisticRegressionModel, which is a Model and hence a Transformer.
+
+Ultimately, we are designing a pipeline:
+In machine learning, it is common to run a sequence of algorithms to process and learn from data. 
+E.g., a simple text document processing workflow might include several stages:  
+  Split each document’s text into words.
+  Convert each document’s words into a numerical feature vector.
+  Learn a prediction model using the feature vectors and labels.
+MLlib represents such a workflow as a Pipeline, which consists of a sequence of PipelineStages (Transformers and Estimators) 
+to be run in a specific order. We will use this simple workflow as a running example in this section.
+
+
+A Pipeline is an Estimator. Thus, after a Pipeline’s fit() method runs, it produces a PipelineModel, which is a Transformer. 
+This PipelineModel is used at test time; 
