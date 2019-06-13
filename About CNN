@@ -1,0 +1,21 @@
+Why CNN become so popular?
+https://www.analyticsvidhya.com/blog/2018/12/guide-convolutional-neural-network-cnn/
+Bascially any data that has spatial relationships is ripe for applying CNN. For instance, image, video and even text.
+ We saw how using deep neural networks on very large images increases the computation and memory cost. 
+ To combat this obstacle, we will see how convolutions and convolutional neural networks help us to 
+ bring down these factors and generate better results.
+
+
+There are a number of hyperparameters that we can tweak while building a convolutional network. 
+These include the number of filters, size of filters, stride to be used, padding.
+
+In a convolutional network (ConvNet), there are basically three types of layers:
+
+Convolution layer
+Pooling layer
+Fully connected layer
+
+There are a combination of convolution and pooling layers at the beginning, a few fully connected layers at the end 
+and finally a softmax classifier to classify the input into various categories.
+
+Cross entropy indicates the distance between what the model believes the output distribution should be, and what the original distribution really is. 
